@@ -1110,43 +1110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-      /**
-       * Creates a portfolio item DOM element.
-       *
-       * @param {string} src - The image source URL.
-       * @param {string} alt - Alternate text for the image.
-       * @param {string} additionalClass - Additional class (e.g., "mil-square" or "mil-port") to apply to the cover.
-       * @returns {HTMLElement} - The portfolio item element.
-       */
-      function createPortfolioItem(src, alt, additionalClass) {
-        // Create the card container
-        var cardDiv = document.createElement("div");
-        cardDiv.className = "mil-work-card mil-stl mil-mb30";
-        
-        // Create the cover div with an additional class for styling (square/portrait)
-        var coverDiv = document.createElement("div");
-        coverDiv.className = "mil-cover " + additionalClass + " mil-up";
-        
-        // Create the hover frame
-        var hoverDiv = document.createElement("div");
-        hoverDiv.className = "mil-hover-frame";
-        
-        // Create the image element and set its attributes
-        var imgEl = document.createElement("img");
-        imgEl.src = src;
-        imgEl.alt = alt;
-        imgEl.className = "mil-scale-img";
-        imgEl.setAttribute("data-value-1", "1.15");
-        imgEl.setAttribute("data-value-2", "1");
-        
-        // Build the structure
-        hoverDiv.appendChild(imgEl);
-        coverDiv.appendChild(hoverDiv);
-        cardDiv.appendChild(coverDiv);
-        
-        return cardDiv;
-      }
-
 
 });
 
